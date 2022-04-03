@@ -1,24 +1,33 @@
 "use strict"
 
+// function BinarioADecimal(num) {
+//   // tu codigo aca
+//   // num strin -> array
+//   // "1010" -> [1, 0, 1, 0]
+
+//   //  PRIMER FORMA
+
+//   var array = num.split("")
+//   var sum = 0
+//   for (var i = 0; i < array.length; i++) {
+//     sum = sum + Math.pow(2, array.length - 1 - i) * array[i]
+//   }
+//   return sum
+// }
+
+//   var array = num.split("")
+//   var sum = 0
+//   for (var j = array.length - 1; j >= 0; j--) {
+//     sum = sum + Math.pow(2, array.length - 1 - j * array[j]
+//   }
+//   return sum
+// }
+
 function BinarioADecimal(num) {
-  // tu codigo aca
-  // num strin -> array
-  // "1010" -> [1, 0, 1, 0]
-
-  //  PRIMER FORMA
-
-  // var array = num.split("")
-  // var sum = 0
-  // for (var i = 0; i < array.length; i++) {
-  //   sum = sum + Math.pow(2, array.length - 1 - i * array[i])
-  // }
-  // return sum
-  // console.log(num)
-
   var array = num.split("")
   var sum = 0
-  for (var j = array.length - 1; j >= 0; j--) {
-    sum = sum + Math.pow(2, array.length - 1 - j) * array[j]
+  for (var i = 0; i < array.length; i++) {
+    sum = sum + Math.pow(2, array.length - 1 - i) * array[i]
   }
   return sum
 }
