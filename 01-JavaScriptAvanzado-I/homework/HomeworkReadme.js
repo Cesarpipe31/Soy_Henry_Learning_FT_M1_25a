@@ -167,3 +167,5 @@ function printing() {
 }
 
 printing();
+
+Orden de Ejecución:  1 , 4 , 3 , 2
