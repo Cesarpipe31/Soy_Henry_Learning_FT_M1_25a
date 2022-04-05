@@ -126,4 +126,44 @@ function getFood(food) {
     return snack;  //  Friskies
 }
 
-getFood(false);  // no hace nada
+console.log(getFood(false));  // undefined
+
+
+///////////////////////////////
+
+
+/// This
+/// ¿Cuál es el output o salida en consola luego de ejecutar esté código? Explicar por qué:
+
+var fullname = 'Juan Perez';
+var obj = {
+   fullname: 'Natalia Nerea',
+   prop: {
+      fullname: 'Aurelio De Rosa',
+      getFullname: function() {
+         return this.fullname;
+      }
+   }
+};
+
+console.log(obj.prop.getFullname());  //  Aurelio De Rosa
+
+var test = obj.prop.getFullname;  //  Juan Perez
+ 
+console.log(test());  // Undefined
+
+
+//////////////////////////////
+
+
+///   Event loop
+///   Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra por consola? ¿Por qué?
+
+function printing() {
+   console.log(1);
+   setTimeout(function() { console.log(2); }, 1000);
+   setTimeout(function() { console.log(3); }, 0);
+   console.log(4);
+}
+
+printing();
