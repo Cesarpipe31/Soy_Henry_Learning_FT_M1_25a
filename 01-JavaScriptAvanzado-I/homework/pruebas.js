@@ -74,3 +74,68 @@ function a() {
 a();
 
 
+////////////////
+
+
+var a = 5
+var b = 6
+var c = 7
+
+a = c
+
+c = 9
+
+console.log(a)
+console.log(c)
+
+
+//////////////////
+
+
+var a
+
+var b = {nombre: "Martina"}
+
+a = b
+b.nombre = "Juana"
+
+
+
+//////////////////
+
+
+var obj = {
+  nombre: "Objeto",
+  log : function(){
+    this.nombre = "Cambiado",
+    console.log(this)
+
+    var that = this
+
+    var cambia = function ( str ) {
+      that.nombre = str 
+    }
+    cambia ("Hooola")
+    console.log(this)
+  }
+}
+
+console.log(obj)
+
+obj.log()
+
+obj.cambia()
+
+
+/////////////////
+
+
+function saludarMasTarde(){
+  var saludo = "Hola"
+
+  setTimeout(function(){
+    console.log(saludo)
+    },3000)
+}
+
+saludarMasTarde()
